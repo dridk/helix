@@ -1,0 +1,60 @@
+
+theme="onedark"
+
+[editor]
+true-color=true
+cursorline=true
+mouse= true
+bufferline="multiple"
+
+[keys.insert]
+C-c="normal_mode"
+
+[keys.normal]
+# C-c="no_op"
+# C-d=["move_prev_word_start", "move_next_word_start","search_selection", "select_mode"]
+C-d = ["extend_line_below", "yank", "goto_line_start", "paste_before","move_visual_line_down", "collapse_selection"]
+S-tab=":buffer-next"
+C-s=":write"
+C-S-e=":write"
+C-n=":new"
+"ins"=":vnew"
+C-q=":buffer-close"
+C-a=["select_mode", "goto_line_start"]
+C-e=["select_mode", "goto_line_end"]
+
+C-up=[ "delete_selection", "move_visual_line_up", "paste_before"]
+C-down=[ "delete_selection", "move_visual_line_down", "paste_before"]
+C-space=["save_selection"]
+C-b=":run-shell-command make"
+C-c="collapse_selection"
+
+
+"F2"=":config-open"
+"F1"=":config-reload"
+C-left="jump_backward"
+C-right="jump_forward"
+
+
+[keys.normal."m"]
+m=["move_prev_word_start", "move_next_word_start"]
+# c = ":config-reload" 
+
+[keys.normal.space]
+c="toggle_comments"
+
+
+
+[editor.cursor-shape]
+insert="bar"
+normal="block"
+select="underline"
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center=["file-name", "version-control"]
+mode.normal="NORMAL"
+mode.insert="INSERT"
+mode.select="SELECT"
+
+

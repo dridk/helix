@@ -42,7 +42,7 @@ m=["move_prev_word_start", "move_next_word_start"]
 
 [keys.normal.space]
 c="toggle_comments"
-
+i=":format"
 
 
 [editor.cursor-shape]

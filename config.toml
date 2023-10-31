@@ -9,6 +9,7 @@ bufferline="multiple"
 
 [keys.insert]
 C-c="normal_mode"
+C-space=["normal_mode", "move_visual_line_down", "insert_mode"]
 
 [keys.normal]
 # C-c="no_op"

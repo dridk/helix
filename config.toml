@@ -7,9 +7,12 @@ cursorline=true
 mouse= true
 bufferline="multiple"
 
+
+
 [keys.insert]
 C-c="normal_mode"
 C-space=["normal_mode", "move_visual_line_down", "insert_mode"]
+C-s=["normal_mode", ":write"]
 
 [keys.normal]
 # C-c="no_op"
@@ -52,10 +55,14 @@ normal="block"
 select="underline"
 
 [editor.statusline]
-left = ["mode", "spinner"]
-center=["file-name", "version-control"]
+left = ["mode", "spinner", "file-modification-indicator"]
+center=["file-name", "version-control" ]
+right= ["position","position-percentage", "register", "spacer" ]
 mode.normal="NORMAL"
 mode.insert="INSERT"
 mode.select="SELECT"
+
+[editor.file-picker]
+hidden = false
 
 

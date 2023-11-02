@@ -17,7 +17,10 @@ C-s=["normal_mode", ":write"]
 [keys.normal]
 # C-c="no_op"
 # C-d=["move_prev_word_start", "move_next_word_start","search_selection", "select_mode"]
-C-d = ["extend_line_below", "yank", "goto_line_start", "paste_before","move_visual_line_down", "collapse_selection"]
+
+
+C-S-d = ["extend_line_below", "yank", "goto_line_start", "paste_before","move_visual_line_down", "collapse_selection"]
+C-d = ["extend_to_line_bounds","delete_selection" ] 
 S-tab=":buffer-next"
 C-s=":write"
 C-S-e=":write"

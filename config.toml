@@ -19,7 +19,7 @@ C-s=["normal_mode", ":write"]
 # C-d=["move_prev_word_start", "move_next_word_start","search_selection", "select_mode"]
 
 
-C-S-d = ["extend_line_below", "yank", "goto_line_start", "paste_before","move_visual_line_down", "collapse_selection"]
+D=["ensure_selections_forward", "extend_to_line_end", "delete_selection"]
 C-d = ["extend_to_line_bounds","delete_selection" ] 
 S-tab=":buffer-next"
 C-s=":write"
@@ -27,8 +27,8 @@ C-S-e=":write"
 C-n=":new"
 "ins"=":vnew"
 C-q=":buffer-close"
-C-a=["select_mode", "goto_line_start"]
-C-e=["select_mode", "goto_line_end"]
+C-a=["select_mode", "goto_line_start", "normal_mode"]
+C-e=["select_mode", "goto_line_end", "normal_mode"]
 
 C-up=[ "delete_selection", "move_visual_line_up", "paste_before"]
 C-down=[ "delete_selection", "move_visual_line_down", "paste_before"]
@@ -50,7 +50,7 @@ m=["move_prev_word_start", "move_next_word_start"]
 [keys.normal.space]
 c="toggle_comments"
 i=":format"
-
+d = ["extend_line_below", "yank", "goto_line_start", "paste_before","move_visual_line_down", "collapse_selection"]
 
 [editor.cursor-shape]
 insert="bar"

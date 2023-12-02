@@ -16,19 +16,20 @@ C-s=["normal_mode", ":write"]
 
 [keys.normal]
 # C-c="no_op"
-# C-d=["move_prev_word_start", "move_next_word_start","search_selection", "select_mode"]
+
+#C-d=["move_prev_word_start", "move_next_word_start","search_selection", "select_mode"]
+
+"C-d" = ["keep_primary_selection", "move_prev_word_start", "move_next_word_end", "search_selection", "select_mode"]
 
 
-D=["ensure_selections_forward", "extend_to_line_end", "delete_selection"]
-C-d = ["extend_to_line_bounds","delete_selection" ] 
+D=["ensure_selections_forward", "extend_to_line_end"]
 S-tab=":buffer-next"
 C-s=":write"
 C-S-e=":write"
+
 C-n=":new"
 "ins"=":vnew"
 C-q=":buffer-close"
-C-a=["select_mode", "goto_line_start", "normal_mode"]
-C-e=["select_mode", "goto_line_end", "normal_mode"]
 
 C-up=[ "delete_selection", "move_visual_line_up", "paste_before"]
 C-down=[ "delete_selection", "move_visual_line_down", "paste_before"]
@@ -41,6 +42,9 @@ C-c="collapse_selection"
 "F1"=":config-reload"
 C-left="jump_backward"
 C-right="jump_forward"
+
+[keys.select]
+"C-d" = ["search_selection", "extend_search_next"]
 
 
 [keys.normal."m"]

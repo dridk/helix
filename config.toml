@@ -19,13 +19,15 @@ C-s=["normal_mode", ":write"]
 
 #C-d=["move_prev_word_start", "move_next_word_start","search_selection", "select_mode"]
 
-"C-d" = ["keep_primary_selection", "move_prev_word_start", "move_next_word_end", "search_selection", "select_mode"]
+# Replace word under cursor 
+"C-f" = ["keep_primary_selection", "move_prev_word_start", "move_next_word_end", "search_selection", "select_mode"]
+
+# Duplicate line 
+"C-d"= ["extend_to_line_bounds", "yank", "paste_after"]
 
 
-D=["ensure_selections_forward", "extend_to_line_end"]
 S-tab=":buffer-next"
 C-s=":write"
-C-S-e=":write"
 
 C-n=":new"
 "ins"=":vnew"
@@ -44,7 +46,7 @@ C-left="jump_backward"
 C-right="jump_forward"
 
 [keys.select]
-"C-d" = ["search_selection", "extend_search_next"]
+"C-f" = ["search_selection", "extend_search_next"]
 
 
 [keys.normal."m"]
@@ -54,7 +56,6 @@ m=["move_prev_word_start", "move_next_word_start"]
 [keys.normal.space]
 c="toggle_comments"
 i=":format"
-d = ["extend_line_below", "yank", "goto_line_start", "paste_before","move_visual_line_down", "collapse_selection"]
 
 [editor.cursor-shape]
 insert="bar"

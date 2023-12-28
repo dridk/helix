@@ -25,6 +25,8 @@ C-s=["normal_mode", ":write"]
 # Duplicate line 
 "C-d"= ["extend_to_line_bounds", "yank", "paste_after"]
 
+# Delete line like vim 
+"d"={d=["extend_to_line_bounds","delete_selection" ]}
 
 S-tab=":buffer-next"
 C-s=":write"
@@ -56,6 +58,8 @@ m=["move_prev_word_start", "move_next_word_start"]
 [keys.normal.space]
 c="toggle_comments"
 i=":format"
+space="repeat_last_motion"
+
 
 [editor.cursor-shape]
 insert="bar"

@@ -13,6 +13,9 @@ bufferline="multiple"
 C-c="normal_mode"
 C-space=["normal_mode", "move_visual_line_down", "insert_mode"]
 C-s=["normal_mode", ":write"]
+C-a=["normal_mode", "goto_line_start", "insert_at_line_start"]
+C-e=["normal_mode", "goto_line_end", "insert_at_line_end"]
+
 
 [keys.normal]
 # C-c="no_op"
@@ -24,6 +27,7 @@ C-s=["normal_mode", ":write"]
 
 # Duplicate line 
 "C-d"= ["extend_to_line_bounds", "yank", "paste_after"]
+
 
 
 S-tab=":buffer-next"
@@ -45,8 +49,16 @@ C-c="collapse_selection"
 C-left="jump_backward"
 C-right="jump_forward"
 
+C-a=["goto_line_start"]
+C-e=["goto_line_end"]
+
+
+
 [keys.select]
+
 "C-f" = ["search_selection", "extend_search_next"]
+
+
 
 
 [keys.normal."m"]
@@ -56,6 +68,9 @@ m=["move_prev_word_start", "move_next_word_start"]
 [keys.normal.space]
 c="toggle_comments"
 i=":format"
+right="extend_to_line_end"
+left="extend_to_line_start"
+
 
 [editor.cursor-shape]
 insert="bar"

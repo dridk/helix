@@ -69,6 +69,10 @@ c=["yank"]
 v=["paste_after"]
 V=["paste_before"]
 
+
+[keys.select.space]
+"/"="toggle_comments"
+
 [editor.cursor-shape]
 insert="bar"
 normal="block"

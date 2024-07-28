@@ -6,7 +6,7 @@ true-color=true
 cursorline=true
 mouse= true
 bufferline="multiple"
-
+auto-format = true
 [keys.insert]
 C-c="normal_mode"
 C-s=["normal_mode", ":write"]
@@ -37,7 +37,6 @@ C-up=[ "delete_selection", "move_visual_line_up", "paste_before"]
 C-down=[ "delete_selection", "move_visual_line_down", "paste_before"]
 C-a=["select_all"]
 
-
 # Mark current line 
 C-space=["save_selection"]
 
@@ -53,6 +52,7 @@ C-right="jump_forward"
 
 
 C-w=["move_char_right", "move_prev_word_start", "move_next_word_start", "search_selection"]
+
 
 [keys.select]
 

@@ -7,11 +7,20 @@ cursorline=true
 mouse= true
 bufferline="multiple"
 auto-format = true
+end-of-line-diagnostics = "hint"
+
+
 [keys.insert]
 C-c="normal_mode"
 C-s=["normal_mode", ":write"]
 C-a=["normal_mode", "goto_line_start", "insert_at_line_start"]
 C-e=["normal_mode", "goto_line_end", "insert_at_line_end"]
+
+
+[editor.lsp]
+enable = true
+display-inlay-hints = true
+
 
 
 [keys.normal]
@@ -35,7 +44,6 @@ C-n=":new"
 C-up=[ "delete_selection", "move_visual_line_up", "paste_before"]
 # Move line 
 C-down=[ "delete_selection", "move_visual_line_down", "paste_before"]
-C-a=["select_all"]
 
 # Mark current line 
 C-space=["save_selection"]
@@ -61,13 +69,11 @@ C-w=["move_char_right", "move_prev_word_start", "move_next_word_start", "search_
 
 
 [keys.normal.space]
-"/"="toggle_comments"
+# "/"="toggle_comments"
 i=":format"
 right="extend_to_line_end"
 left="extend_to_line_start"
-c=["yank"]
-v=["paste_after"]
-V=["paste_before"]
+
 
 
 [keys.select.space]

@@ -1,8 +1,17 @@
 [[language]]
-name = "python"
-language-servers = ["pylsp"]
 auto-format = true
+language-servers = ["pylsp"]
+name = "python"
+scope = "source.python"
 
 [language.formatter]
 command = "black"
 args = ["--line-length", "100", "--quiet", "-"]
+
+[language-server.emmet-ls]
+args = ["--stdio"]
+command="emmet-ls"
+
+[[language]]
+name = "html"
+language-servers = ["vscode-html-language-server", "emmet-ls"]

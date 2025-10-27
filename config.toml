@@ -28,10 +28,7 @@ display-inlay-hints = true
 "C-f" = ["keep_primary_selection", "move_prev_word_start", "move_next_word_end", "search_selection", "select_mode"]
 
 # Duplicate line 
-"C-d"= [ "yank",  "paste_after"]
-
-# Delete line 
-C-x=["extend_to_line_bounds", "delete_selection"]
+"C-d"= ["extend_line_below", "yank",  "paste_after", "move_visual_line_up"]
 
 # Buffer 
 S-tab=":buffer-next"
@@ -61,7 +58,9 @@ C-right="jump_forward"
 
 C-w=["move_char_right", "move_prev_word_start", "move_next_word_start", "search_selection"]
 
-
+S-c="yank"
+S-x=["copy_selection_on_next_line"]
+S-m="@mim"
 [keys.select]
 
 "C-f" = ["search_selection", "extend_search_next"]
